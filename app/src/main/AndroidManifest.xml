@@ -12,14 +12,21 @@
         <activity
             android:name=".splashscreen.Splashscreen4Activity"
             android:exported="false" />
+        <intent-flter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+
+
+        </intent-flter>
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
+            <intent-flter>
+                <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+            </intent-flter>
         </activity>
     </application>
 
