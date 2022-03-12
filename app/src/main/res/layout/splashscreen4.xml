@@ -4,27 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".splashscreen.Splashscreen4Activity">
+    tools:context=".splashscreen.Splashscreen4Activity"
+    android:background="@color/black">
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/lockssplash_two"
+        android:layout_margin="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
         />
 
-    <TextView
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:fontFamily="@font/bonheur_royale_regular"
-        android:text="Kawach"
-        android:textColor="@color/white"
-        android:textSize="90dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,22 +11,20 @@
         android:theme="@style/Theme.Kawach">
         <activity
             android:name=".splashscreen.Splashscreen4Activity"
-            android:exported="false" />
-        <intent-flter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-
-
-        </intent-flter>
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
-            <intent-flter>
+
+            <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.MAIN" />
 
+            </intent-filter>
+        </activity>
 
-            </intent-flter>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
