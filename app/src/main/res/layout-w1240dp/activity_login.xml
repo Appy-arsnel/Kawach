@@ -56,7 +56,7 @@
         android:id="@+id/Registertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0"
+        android:layout_marginTop="0dp"
 
         android:layout_marginBottom="318dp"
         android:gravity="center"
