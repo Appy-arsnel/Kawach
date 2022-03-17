@@ -1,6 +1,7 @@
 package com.example.kawach.ui.home;
 
 import android.content.pm.ApplicationInfo;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +20,9 @@ import java.text.CollationElementIterator;
 import java.util.List;
 
 public class applist_recyclerview extends RecyclerView.Adapter <applist_recyclerview.ViewHolder> {
-    private applistdata[] applist_data;
-    public applist_recyclerview(applistdata[] applist_data){
+    private List<applistdata> applist_data;
+    public applist_recyclerview(List<applistdata> applist_data){
+
         this.applist_data=applist_data;
     }
 
@@ -35,9 +37,9 @@ public class applist_recyclerview extends RecyclerView.Adapter <applist_recycler
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder,final int position) {
-        final applistdata myListData = applist_data[position];
-        holder.textView.setText(applist_data[position].getDescription());
-        holder.imageView.setImageDrawable(applist_data[position].getImgId());
+        final applistdata myListData = applist_data.get(holder.getAdapterPosition());
+        holder.textView.setText(myListData.getDescription());
+        holder.imageView.setImageDrawable(myListData.getImgId());
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +50,7 @@ public class applist_recyclerview extends RecyclerView.Adapter <applist_recycler
 
     @Override
     public int getItemCount() {
-        return applist_data.length;
+        return applist_data.size();
     }
 
 

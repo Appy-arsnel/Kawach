@@ -5,6 +5,8 @@ import android.graphics.drawable.Drawable;
 public class applistdata {
     private String description;
     private Drawable imgId;
+    public applistdata()
+        {}
     public applistdata(String description, Drawable imgId) {
         this.description = description;
         this.imgId = imgId;
