@@ -10,22 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kawach">
         <activity
+            android:name=".MainActivity1"
+            android:exported="false"
+            android:label="@string/title_activity_main1"
+            android:theme="@style/Theme.Kawach.NoActionBar" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
             android:name=".splashscreen.Splashscreen4Activity"
             android:exported="true">
-
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
-                <action android:name="android.intent.action.MAIN" />
 
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
