@@ -133,7 +133,7 @@ public class LoginActivity extends AppCompatActivity {
         // TODO : initiate successful logged in experience
         startActivity(new Intent(LoginActivity.this, MainActivity1.class));
 
-        Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
 
     private void showLoginFailed(@StringRes Integer errorString) {
