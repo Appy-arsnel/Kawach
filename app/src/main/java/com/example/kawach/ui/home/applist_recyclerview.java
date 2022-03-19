@@ -17,6 +17,7 @@ import com.example.kawach.R;
 import com.example.kawach.data.applistdata;
 
 import java.text.CollationElementIterator;
+import java.util.ArrayList;
 import java.util.List;
 
 public class applist_recyclerview extends RecyclerView.Adapter <applist_recyclerview.ViewHolder> {
@@ -51,6 +52,11 @@ public class applist_recyclerview extends RecyclerView.Adapter <applist_recycler
     @Override
     public int getItemCount() {
         return applist_data.size();
+    }
+
+    public void filterList(ArrayList<applistdata> filteredList) {
+        applist_data = filteredList;
+        notifyDataSetChanged();
     }
 
 
