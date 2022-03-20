@@ -11,7 +11,9 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -47,20 +49,32 @@ public class HomeFragment extends Fragment {
 
         try {
     FloatingActionButton fab = root.findViewById(R.id.fab);
-    binding.fab.setOnKeyListener(new View.OnKeyListener() {
+  /* searchview.setOnKeyListener(new View.OnKeyListener() {
         @Override
         public boolean onKey(View view, int i, KeyEvent keyEvent) {
             if((keyEvent.getAction()==KeyEvent.KEYCODE_BACK) ||(i == KeyEvent.KEYCODE_ENTER)){
-               fab.setVisibility(View.GONE);
+               fab.setVisibility(View.VISIBLE);
+               searchview.setVisibility(View.GONE);
                 return true;
 
             }
-            fab.setVisibility(View.VISIBLE);
+
 
 
             return false;
         }
-    });
+    });*/
+            searchview.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                    if ((keyEvent != null && (keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (i == EditorInfo.IME_ACTION_DONE)) {
+                        fab.setVisibility(View.VISIBLE);
+                        searchview.setVisibility(View.GONE);
+
+                    }
+                    return false;
+                }
+            });
     binding.fab.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -172,4 +186,5 @@ catch (Exception e){
         super.onDestroyView();
         binding = null;
     }
+
 }
