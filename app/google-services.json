@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "124160358933",
+    "project_id": "kawach-4f64c",
+    "storage_bucket": "kawach-4f64c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124160358933:android:c8406b52fa8f81627eac1c",
+        "android_client_info": {
+          "package_name": "com.example.kawach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124160358933-8tounfbkvpeel0k9td864jpk7csbpsb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATTrOCf89YqvKECaW-GwHUHgBm5j7jlEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124160358933-8tounfbkvpeel0k9td864jpk7csbpsb4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
