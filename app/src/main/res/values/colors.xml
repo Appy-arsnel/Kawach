@@ -17,4 +17,5 @@
     <color name="applock__create_choose_option_bg_pressed">#11000000</color>
 
     <color name="applock__action_settings">#95A5A6</color>
+    <color name="green_proceed">#33cc33</color>
 </resources>

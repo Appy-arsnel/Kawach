@@ -28,8 +28,8 @@
     <string name="applock__description_unlock_fingerprint">Scan your fingerprint to unlock.</string>
     <string name="applock__description_unlock_fingerprint_help">We\'re having trouble recognizing your fingerprint: %1$s</string>
 
-    <string name="applock__create_chooser_option_pin">PIN</string>
-    <string name="applock__create_chooser_option_fingerprint">Fingerprint</string>
+    <string name="applock__create_chooser_option_pin">Graphical Authentication</string>
+    <string name="applock__create_chooser_option_fingerprint">Fingerprint Authentication</string>
 
     <string name="applock__unlock_error_no_matching_pin_found">There is no saved PIN to unlock.</string>
     <string name="applock__unlock_error_match_failed">The PINs don\'t match!</string>

@@ -1,11 +1,13 @@
 package com.example.kawach;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.app.KeyguardManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
@@ -21,7 +23,8 @@ public class setpassword extends AppCompatActivity {
     private  FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
     private TextView paraLabel;
-
+    AppCompatButton proccedbtn;
+    private int numberofpasswordset=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,8 @@ public class setpassword extends AppCompatActivity {
                     fingerprint();
                 }
             });
+            proccedbtn=findViewById(R.id.proceed_btn);
+
         }catch (Exception e){
             Toast.makeText(this,"Error: "+e,Toast.LENGTH_LONG).show();
         }
@@ -69,10 +74,21 @@ public class setpassword extends AppCompatActivity {
                 paraLabel.setText("Place your Finger on Scanner to access fingerprint scanner");
                 FingerprintHandler fingerprintHandler=new FingerprintHandler(this);
                 fingerprintHandler.startAuth(fingerprintManager,null);
-
+                proceed();
             }
 
         }
 
     }
+
+    private void proceed() {
+            proccedbtn.setBackgroundColor(getResources().getColor(R.color.green_proceed));
+            proccedbtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getApplicationContext(),MainActivity1.class));
+                }
+            });
+        }
+
 }
