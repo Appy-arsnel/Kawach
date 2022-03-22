@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.example.kawach.MainActivity;
 import com.example.kawach.MainActivity1;
 import com.example.kawach.R;
+import com.example.kawach.setpassword;
 import com.example.kawach.splashscreen.Splashscreen4Activity;
 import com.example.kawach.ui.login.LoginViewModel;
 import com.example.kawach.ui.login.LoginViewModelFactory;
@@ -131,7 +132,8 @@ public class LoginActivity extends AppCompatActivity {
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience
-        startActivity(new Intent(LoginActivity.this, MainActivity1.class));
+       // startActivity(new Intent(LoginActivity.this, MainActivity1.class));
+        startActivity(new Intent(LoginActivity.this, setpassword.class));
 
        // Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
