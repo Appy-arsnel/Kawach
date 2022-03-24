@@ -11,18 +11,21 @@
         <entry key="app/src/main/res/drawable/circle.xml" value="0.169" />
         <entry key="app/src/main/res/drawable/dimens.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2975" />
+        <entry key="app/src/main/res/drawable/ic_baseline_north_24.xml" value="0.1665" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1665" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2975" />
         <entry key="app/src/main/res/layout-w1240dp/activity_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout-w936dp/activity_login.xml" value="0.26796875" />
-        <entry key="app/src/main/res/layout/activity_graphical_password.xml" value="0.3572916666666667" />
+        <entry key="app/src/main/res/layout/activity_graphical_password.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.3572916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main1.xml" value="0.3572916666666667" />
         <entry key="app/src/main/res/layout/activity_setpassword.xml" value="0.25" />
         <entry key="app/src/main/res/layout/app_bar_main1.xml" value="0.33" />
         <entry key="app/src/main/res/layout/border.xml" value="0.3572916666666667" />
+        <entry key="app/src/main/res/layout/content_graphical_pass_auth_images.xml" value="0.3572916666666667" />
         <entry key="app/src/main/res/layout/content_main1.xml" value="0.25" />
         <entry key="app/src/main/res/layout/content_single_app_recyclerview_model.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.33" />

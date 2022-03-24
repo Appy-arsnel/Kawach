@@ -9,6 +9,7 @@ import android.Manifest;
 import android.app.KeyguardManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.hardware.biometrics.BiometricPrompt;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,6 +25,8 @@ public class setpassword extends AppCompatActivity {
     private KeyguardManager keyguardManager;
     private TextView paraLabel;
     AppCompatButton proccedbtn;
+    ImageView gauthimg;
+
     private int numberofpasswordset=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +35,20 @@ public class setpassword extends AppCompatActivity {
         try {
             paraLabel=findViewById(R.id.paralabel);
             fingerprint=(ImageView) findViewById(R.id.fingerprintimg);
+            gauthimg=(ImageView) findViewById(R.id.graphicalauthbtn);
+
             fingerprint.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
 
                     fingerprint();
+                }
+            });
+            gauthimg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getApplicationContext(),graphical_password.class));
                 }
             });
             proccedbtn=findViewById(R.id.proceed_btn);
@@ -74,7 +85,8 @@ public class setpassword extends AppCompatActivity {
                 paraLabel.setText("Place your Finger on Scanner to access fingerprint scanner");
                 FingerprintHandler fingerprintHandler=new FingerprintHandler(this);
                 fingerprintHandler.startAuth(fingerprintManager,null);
-                proceed();
+
+            proceed();
             }
 
         }
@@ -91,4 +103,8 @@ public class setpassword extends AppCompatActivity {
             });
         }
 
+    @Override
+    public void onBackPressed() {
+        super.finish();
+    }
 }
